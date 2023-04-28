@@ -37,7 +37,7 @@ int main()
   qe.push({i,6});
   qe.push({i,7});
   qe.push({i,8});
-  //x and y are size
+
   while(true){
     printifj(a);
     char input;
@@ -52,11 +52,9 @@ int main()
                 continue;
                 break;
             }
-            // a[x][y]=0;
             i=(i+1)%10;
             a[i][j]=2;
 
-            // x=i;y=j;
             break;
         case 'w':
             if(a[i-1][j]==1){
@@ -67,13 +65,9 @@ int main()
                 break;
             }
 
-            // a[x][y]=0;
-            // i-=1;
-            // i=(i==-1)?i=n:i;
             i = (i - 1 + n) % n;
             a[i][j]=2;
 
-            // x=i;y=j;
             break;
         case 'd':
             if(a[i][j+1]==1){
@@ -84,11 +78,9 @@ int main()
                 break;
             }
 
-            // a[x][y]=0;
             j=(j+1)%10;
             a[i][j]=2;
             
-            // x=i;y=j;
             break;
         case 'a':
             if(a[i][j-1]==1){
