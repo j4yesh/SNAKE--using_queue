@@ -17,22 +17,22 @@ void printifj(vector<vector<char>>&a){
     }
 }
 void spawnRat(vector<vector<char>>&a){
-    int m=a.size();
-    srand(static_cast<unsigned int>(time(0)));
-
+    int m = a.size();
     int miin = 0;
-    int mex = m-1;
+    int mex = m - 1;
 
     int row = miin + (rand() % (mex - miin + 1));
     int col = miin + (rand() % (mex - miin + 1));
-    while(a[row][col]!='0'){
-         row = miin + (rand() % (mex - miin + 1));
-         col = miin + (rand() % (mex - miin + 1));
+    while(a[row][col] != '0'){
+        row = miin + (rand() % (mex - miin + 1));
+        col = miin + (rand() % (mex - miin + 1));
     }
-    a[row][col]='1';
+    cout << row << " " << col << " quicker \n";
+    a[row][col] = '1';
 }
 int main()
 { 
+    srand(static_cast<unsigned int>(std::time(0)));
   int n=10;
   vector<vector<char>>a(n,vector<char>(n));
   int i=5,j=5;
@@ -101,7 +101,7 @@ int main()
             
             break;
         case 'a':
-            if(a[i][j-1]==1){
+            if(a[i][j-1]=='1'){
                 j = (j - 1 + n) % n;
                 a[i][j]='2';
                 qe.push({i,j});  
