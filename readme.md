@@ -1,5 +1,5 @@
 # Snake Game
-![Alt Text](https://s1.ezgif.com/tmp/ezgif-1-347e95081b.gif)
+![Alt Text](https://c.tenor.com/hmlAOYcR0d0AAAAC/tenor.gif)
 
 This repository contains a C++ implementation of the classic Snake game. The game is designed to run in a command-line interface and uses the Standard Template Library (STL) and `windows.h` for efficient data handling and display updates.
 
